@@ -7,10 +7,12 @@
       </li>
     </ul>
     <button type="button" @click="showPotato(true)">show potatoes</button>
-    <p v-show="isPotatoShown">
-      Here are them potatoes!
-      <button type="button" @click="showPotato(false)">close</button>
-    </p>
+    <transition>
+      <p v-show="isPotatoShown">
+        Here are them potatoes!
+        <button type="button" @click="showPotato(false)">close</button>
+      </p>
+    </transition>
   </div>
 </template>
 
